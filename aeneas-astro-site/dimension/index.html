@@ -1,151 +1,79 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Aeneas Amine Huy — Astrophysics Research</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
-	<body>
+<!-- Research -->
+<article id="research">
+    <h2 class="major">Research</h2>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <div class="research-layout">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Aeneas Amine Huy</h1>
-								<p>Bacholors of Science in Physics from the University of Connecticut<br />
-								Aspiring research astronomer — star formation &amp; galaxy evolution</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#research">Research</a></li>
-								<li><a href="#publications">Publications</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
-						</nav>
-					</header>
+        <!-- LEFT COLUMN: RESEARCH TEXT -->
+        <div class="research-text">
 
-				<!-- Main -->
-					<div id="main">
+            <h3>Star Formation in NGC 1566</h3>
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>I'm a recent Physics graduate from the University of Connecticut, preparing to appy to graduate programs in astronomy and astrophysics for the Fall 2027 semester. My research focuses on star formation in nearby galaxies, using multi-wavelength survey data to understand how gas converts into stars across different galactic environments.</p>
-								<p> I worked as part of the <strong>PHANGS collaboration</strong> with Dr. Chris Faesi during my undergraduate career, studying the Kennicutt&ndash;Schmidt star formation relation at ~100&nbsp;pc resolution in the nearby spiral galaxy NGC&nbsp;1566. You can read more about this work in <a href="#research">Research</a> and <a href="#publications">Publications</a> below.</p>
-							</article>
+            <p>
+                My primary project examined the Kennicutt&ndash;Schmidt (KS)
+                star formation relation &mdash; the empirical link between gas
+                surface density and star formation rate &mdash; at ~100&nbsp;pc
+                resolution in the nearby spiral galaxy NGC&nbsp;1566.
+            </p>
 
-						<!-- Research -->
-							<article id="research">
-								<h2 class="major">Research</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<h3>Star Formation in NGC 1566</h3>
-								<p>My primary project examined the Kennicutt&ndash;Schmidt (KS) star formation relation &mdash; the empirical link between gas surface density and star formation rate &mdash; at ~100&nbsp;pc resolution in the nearby spiral galaxy NGC&nbsp;1566. The analysis combines dust-corrected H&alpha; emission from <strong>PHANGS&ndash;MUSE</strong> (tracing recent star formation) with CO(2&ndash;1) emission from <strong>PHANGS&ndash;ALMA</strong> (tracing molecular gas), resolved on a pixel-by-pixel basis across different galactic environments (e.g. spiral arms, bar, disk).</p>
-								<article>
-    <span class="image main">
-        <a href="#figure1" class="figure-link">
-            <img src="images/NEWEST CONTOUR MAP.png" alt="Contour map of the astrophysical observations" />
-        </a>
-    </span>
+            <p>
+                The analysis combines dust-corrected H&alpha; emission from
+                <strong>PHANGS&ndash;MUSE</strong> (tracing recent star formation)
+                with CO(2&ndash;1) emission from
+                <strong>PHANGS&ndash;ALMA</strong> (tracing molecular gas),
+                resolved on a pixel-by-pixel basis across different galactic
+                environments including spiral arms, the bar, and disk.
+            </p>
 
-    <p><strong>Figure 1.</strong> Click the image to view the full figure and description.</p>
-</article>
+            <p>
+                We used a Bayesian hierarchical MCMC regression fitting model
+                (LinMix, Kelly 2007) that accounts for per-pixel measurement
+                errors, making it more statistically robust than an ordinary
+                least-squares fit for this type of astronomical analysis.
+            </p>
 
-<!-- Figure popup -->
-<div id="figure1" class="figure-modal">
-    <a href="#" class="modal-close">&times;</a>
+            <h3>Extension: Toomre Q Stability</h3>
 
-    <div class="modal-content">
-        <img src="images/NEWEST CONTOUR MAP.png" alt="Contour map of the astrophysical observations" />
+            <p>
+                I'm currently extending this analysis to incorporate the Toomre
+                Q stability parameter, which characterizes a disk's local
+                resistance to gravitational collapse. This involves deriving a
+                rotation curve for NGC&nbsp;1566 using tilted-ring fitting
+                methods applied to PHANGS&ndash;ALMA moment maps and connecting
+                environment-resolved Q profiles back to the KS-law results.
+            </p>
 
-        <p>
-            <strong>Figure 1.</strong>
-            Add your scientific caption here. For example: This figure shows ...
-        </p>
+            <h3>Skills &amp; Tools</h3>
+
+            <ul class="alt">
+                <li>Python (NumPy, Astropy, Matplotlib), multi-tracer emission map analysis</li>
+                <li>FITS file handling and pixel-resolved photometry</li>
+                <li>LaTeX (AASTeX) for manuscript preparation</li>
+            </ul>
+
+        </div>
+
+        <!-- RIGHT COLUMN: RESEARCH FIGURES -->
+        <aside class="research-figures">
+
+            <a href="figures/contour-map.html" class="figure-card">
+
+                <img
+                    src="images/NEWEST CONTOUR MAP.png"
+                    alt="Contour map of NGC 1566"
+                />
+
+                <div class="figure-overlay">
+                    <span>Figure 1</span>
+
+                    <strong>
+                        Multi-wavelength Contour Map of NGC 1566
+                    </strong>
+                </div>
+
+            </a>
+
+        </aside>
+
     </div>
-</div>
-								<p>We used a Bayesian hierarchical MCMC regression fitting model (LinMix, Kelly 2007) that accounts for per-pixel measurement errors, which is more statistically robust than an ordinary least-squares fit for this kind of astronomical data.</p>
-								<h3>Extension: Toomre Q Stability</h3>
-								<p>I'm currently extending this analysis to incorporate the Toomre Q stability parameter, which characterizes a disk's local resistance to gravitational collapse. This involves deriving a rotation curve for NGC 1566 from scratch using tilted-ring fitting methods applied to PHANGS&ndash;ALMA moment maps, then connecting environment-resolved Q profiles back to the KS-law results.</p>
-								<h3>Skills &amp; Tools</h3>
-								<ul class="alt">
-									<li>Python (NumPy, Astropy, Matplotlib), multi-tracer emission map analysis</li>
-									<li>FITS file handling and pixel-resolved photometry</li>
-									<li>LaTeX (AASTeX) for manuscript preparation</li>
-								</ul>
-							</article>
-
-						<!-- Publications -->
-							<article id="publications">
-								<h2 class="major">Publications</h2>
-								<div class="table-wrapper">
-									<table class="alt">
-										<thead>
-											<tr>
-												<th>Title</th>
-												<th>Authors</th>
-												<th>Status</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Star Formation Rates in Local Environments: Galaxy NGC 1566</td>
-												<td>[Aeneas A. Huy], C. Faesi, et al.</td>
-												<td>In preparation</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<p><em>This work is being carried out as part of the PHANGS collaboration. In line with collaboration policy, detailed results will be shared here once the manuscript is submitted and the embargo is lifted &mdash; an arXiv link and abstract will be added at that stage.</em></p>
-							</article>
-
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>My long-term goal is to become a research astronomer, and I'm especially drawn to galaxy evolution and the physics of star formation.</p>
-								<p>Outside of research, I'm passionate about science education and outreach. I currently work as a lab assistant at TRADEBE, an environmental services company in Connecticut.</p>
-							</article>
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<p>The easiest way to reach me is by email &mdash; feel free to get in touch about my research, collaboration, or graduate opportunities.</p>
-								<ul class="icons">
-									<li><a href="mailto:aeneashuy@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-									<li><a href="https://linkedin.com/in/aeneas-huy" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								</ul>
-							</article>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; 2026 Aeneas A. Huy. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+</article>

@@ -1660,50 +1660,131 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-.figure-link {
+/* =========================================
+   RESEARCH SECTION WITH SIDE FIGURES
+   ========================================= */
+
+#research .research-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+#research .research-text {
+    flex: 1 1 65%;
+    min-width: 0;
+}
+
+#research .research-figures {
+    flex: 0 0 32%;
+    min-width: 0;
+}
+
+
+/* Figure card */
+
+#research .figure-card {
+    display: block !important;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     cursor: pointer;
+    border-bottom: none;
 }
 
-.figure-modal {
-    display: none;
-    position: fixed;
-    z-index: 10000;
-    inset: 0;
-    overflow: auto;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 3rem 1rem;
+
+/* Force the image to be visible */
+
+#research .figure-card img {
+    display: block !important;
+    position: static !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    margin: 0 !important;
+
+    transform: none;
+    transition: transform 0.3s ease;
 }
 
-.figure-modal:target {
+
+/* Slight zoom when hovering */
+
+#research .figure-card:hover img {
+    transform: scale(1.03);
+}
+
+
+/* Figure title overlay */
+
+#research .figure-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 1rem;
+
+    background: rgba(0, 0, 0, 0.82);
+
+    color: #ffffff;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* Show title on hover */
+
+#research .figure-card:hover .figure-overlay {
+    opacity: 1;
+}
+
+#research .figure-overlay span {
     display: block;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 0.35rem;
 }
 
-.modal-content {
-    max-width: 1000px;
-    margin: auto;
-    text-align: center;
+#research .figure-overlay strong {
+    display: block;
+
+    font-size: 0.9rem;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.05em;
 }
 
-.modal-content img {
-    max-width: 100%;
-    max-height: 75vh;
-    object-fit: contain;
-}
 
-.modal-content p {
-    background: white;
-    color: black;
-    padding: 1.5rem;
-    text-align: left;
-    margin-top: 1rem;
-}
+/* Mobile layout */
 
-.modal-close {
-    position: fixed;
-    top: 1rem;
-    right: 2rem;
-    font-size: 3rem;
-    color: white;
-    text-decoration: none;
-    z-index: 10001;
+@media screen and (max-width: 736px) {
+
+    #research .research-layout {
+        flex-direction: column;
+    }
+
+    #research .research-text {
+        width: 100%;
+    }
+
+    #research .research-figures {
+        width: 100%;
+    }
+
 }
